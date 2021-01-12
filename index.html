@@ -29,7 +29,7 @@
 
 
       <!-- CARD PARENT CONTAINER -->
-      <div class="card">
+      <div class="card" aria-role="group">
 
         <!-- CARD HEADER -->
         <div class="card-header">
@@ -49,8 +49,8 @@
 
         <!-- CARD FOOTER -->
         <div class="card-footer">
-          <button id="generate" class="btn">Generate password <span style="color: white; size: 20px; padding-left: 8px;"><i class="fas fa-key" role="img" aria-label="Password key"></i></span></button>
-          <button id="copy" class="btn-secondary">Copy to clipboard <span style="color: white; size: 20px; padding-left: 8px;"><i class="fas fa-copy" role="img" aria-label="Copy to clipboard"></i></span></button>
+          <button id="generate" class="btn" aria-label="generatePassword" aria-describedby="generatePasswordPrompt">Generate password <span style="color: white; size: 20px; padding-left: 8px;"><i class="fas fa-key" role="img" aria-label="Password key"></i></span></button>
+          <button id="copy" class="btn-secondary" aria-label="copy" aria-describedby="copyPassword">Copy to clipboard <span style="color: white; size: 20px; padding-left: 8px;"><i class="fas fa-copy" role="img" aria-label="Copy to clipboard"></i></span></button>
         </div>
 
 

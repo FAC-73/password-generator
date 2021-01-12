@@ -26,7 +26,7 @@ function generatePassword() {
   var stringLength = (prompt("How many characters would you like your password? Choose between 8 and 128"));
 
   // Cancels the action and returns to the main page
-  if (stringLength == null || stringLength == "")  {
+  if (stringLength == null)  {
     alert("Click the Generate Password button to restart the generator");
     Return;
     }
@@ -53,25 +53,25 @@ function generatePassword() {
         var includeUpperCase = confirm("Would you like your password to include uppercase characters");   
     } 
 
-      // Empty variable includes the targeted variables 
+      // Stores the variable declarations for the password criteria variables
       var passwordCreate = []
       
-      // if user specifies including special characters concatinate specialCaracter variable
+      // if user specifies including special characters concatinate specialCaracter variable with passwordCreate
     if (includeSpecialCharacter) {
       passwordCreate = passwordCreate.concat(specialCharacter)
     }
 
-    // if user specifies including numbers concatinate numeriCharacter variable
+    // if user specifies including numbers concatinate numeriCharacter variable with passwordCreate
     if (includeNumericCharacter) {
       passwordCreate = passwordCreate.concat(number)
     }
     
-    // if user specifies including numbers concatinate lowerCase variable
+    // if user specifies including numbers concatinate lowerCase variable with passwordCreate
     if (includeLowerCase) {
       passwordCreate = passwordCreate.concat(lowerCase)
     }
 
-    // if user specifies including numbers concatinate upperCase variable
+    // if user specifies including numbers concatinate upperCase variable with passwordCreate
     if (includeUpperCase) {
       passwordCreate = passwordCreate.concat(upperCase)
     }
