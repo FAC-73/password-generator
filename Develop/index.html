@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+
+    <!-- CSS STYLESHEET LINKS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@500&family=Lato&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    
+  </head>
+  <body>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="wrapper">
+
+      <!-- APPLICATION HEADER -->
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+
+
+      <!-- CARD PARENT CONTAINER -->
+      <div class="card">
+
+        <!-- CARD HEADER -->
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+          <p>Make your password extra strong by adding special characters, numbers, uppercase and lowercase letters</p>
+        </div>
+
+        <!-- CARD BODY -->
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+
+        <!-- CARD FOOTER -->
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate password <span style="color: white; size: 20px; padding-left: 8px;"><i class="fas fa-key" role="img" aria-label="Password key"></i></span></button>
+          <button id="copy" class="btn-secondary">Copy to clipboard <span style="color: white; size: 20px; padding-left: 8px;"><i class="fas fa-copy" role="img" aria-label="Copy to clipboard"></i></span></button>
+        </div>
+
+
+      </div>
+    </div>
+    <script src="script_v2.js"></script>
+  </body>
+</html>
