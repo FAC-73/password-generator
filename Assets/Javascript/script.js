@@ -113,14 +113,3 @@ function writePassword() {
   }
 
 console.log(copyPassword)
-
-//   var passwordText = document.querySelector("#password");
-//     passwordText.addEventListener("focusout", function() {
-//       changeColor();
-//     });
-
-//     function changeColor() {
-//       // event.preventDefault();
-//       event.stopPropagation();
-//       document.getElementById("password").setAttribute("style", "color: yellow;");
-// }

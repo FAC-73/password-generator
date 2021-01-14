@@ -32,7 +32,7 @@ An application that a user can use to generate a random password based on criter
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Portfolio screenshots](https://github.com/FAC-73/kay-davis-portfolio/blob/main/assets/Images/readme-images/Portfolio-screenshot.jpg?raw=true "Portfolio hero image")
+![Password Generator Screenshot](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/Start.png?raw=true "Password Generator Screenshot")
 <br><br>
 
 **Built using Javascript, HTML and CSS. The password generator is an application where a user can generate a secure, random password - between 8 - 128 characters, and providing options to include numbers, special characters as well as upper and lowercase letters.**
@@ -79,105 +79,56 @@ To get a local copy up and running follow these simple steps. You can also downl
 ![Responsive layout](https://github.com/FAC-73/kay-davis-portfolio/blob/main/assets/Images/readme-images/responsive-portfolio.jpg?raw=true "Responsive views")
 
 
-
-#### Functionality
-The generate button is what is used to trigger the series of prompts requiring the user to provide parameters for their password
-
-
-1. Provide a value between 8 - 128 for your password string length. If the user inputs an invalid value they'll go into a loop until a valid value is input
-   ```
-   function generatePassword() {
-  var stringLength = (prompt("How many characters would you like your password? Choose between 8 and 128"));
-
-  // Loops the user to select a valid string length value 
-  while(stringLength <= 8 || stringLength >= 128) {
-      alert("Password length must be between 8 and 128 characters. Try selecting a different value");
-      var stringLength = (prompt("How many characters would you like your password? Choose between 8 and 128"));
-      }
-   ```
-
-2. If the user wishes to exit the dialog after invoking the action they can do so using the cancel action
-   ```
-   if (stringLength == null)  {
-    alert("Click the Generate Password button to restart the generator");
-    Return;
-    }
-   ```
-
-3. Once they have provided a valid string length value, sequential confirmation dialogs include additional paramenters for generating the password. Each parameter is optional.
-   ```
-   var includeNumericCharacter = confirm("Would you like your password to include numbers");    
-    var includeSpecialCharacter = confirm("Would you like your password to include special characters");
-    var includeLowerCase = confirm("Would you like your password to include lowercase characters");
-    var includeUpperCase = confirm("Would you like your password to include uppercase characters");
-   ```
-
-4. If the user does not confirm at least one parameter from the four options the user is looped and an alert is shown asking them to choose at least one parameter. 
-```
-  while (includeUpperCase === false && includeLowerCase === false && includeSpecialCharacter === false && includeNumericCharacter === false) {
-        alert("You must choose at one of the four criteria's (Numbers, Special Characters, Lowercase or Uppercase) for your password");
-
-        var includeSpecialCharacter = confirm("Would you like your password to include numbers");
-        var includeNumericCharacter = confirm("Would you like your password to include special characters");    
-        var includeLowerCase = confirm("Would you like your password to include lowercase characters");
-        var includeUpperCase = confirm("Would you like your password to include uppercase characters"); 
-  ```
-
-5. Once the user chooses a parameter the selections are stored as a variable and concatenated with the array of letters, numbers and characters determined by the user
- ```
-        var passwordCreate = []
-      
-      // if user specifies including special characters concatinate specialCaracter variable with passwordCreate
-    if (includeSpecialCharacter) {
-      passwordCreate = passwordCreate.concat(specialCharacter)
-    }
-
-    // if user specifies including numbers concatinate numeriCharacter variable with passwordCreate
-    if (includeNumericCharacter) {
-      passwordCreate = passwordCreate.concat(number)
-    }
-    
-    // if user specifies including numbers concatinate lowerCase variable with passwordCreate
-    if (includeLowerCase) {
-      passwordCreate = passwordCreate.concat(lowerCase)
-    }
-
-    // if user specifies including numbers concatinate upperCase variable with passwordCreate
-    if (includeUpperCase) {
-      passwordCreate = passwordCreate.concat(upperCase)
-    }
-   ```
-
-   5. A password is then randomly generated using a for loop using the values stored in the passwordCreate variable and the the math.random function. The stringLength variable provides the length of the password to be generated as specified by the user.
- ```
-           for (var i = 0; i < stringLength; i++) {
-        newPassword = newPassword + passwordCreate[Math.floor(Math.random() * passwordCreate.length)];
-      }
-      return newPassword;
-   ```
-
-   6. Once the password is successfully created and populated into the textarea HTML element
- ```
-         function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-    passwordText.value = password;
-  
-  }
-   ```
-
-
 ## Project deliverables
 
-#### What's 
-1. A prompt is displayed to the user after clicking the 'generate password' button asking the user to provide a value between 8 - 128 characters for the password length
-2. If the user does not provide a valid value they will recieve an alert and will be taken into a loop back to the inital prompt to provide a valid value
-3. The user will be displayed a series of confirmations for password parameters include: Numbers, Special Characters, Uppercase & Lowercase letters.
-4. If none of the parameters are confirmed the application should validate and alert the user to select at least one to continue. 
-5. Once all prompts have been responded, a randomly generated password matching the specified prompts is displayed. The new password is shown in the HTML text area element using a function. 
-6. The password can be copied to clipboard using the 'copy to clipboard' action. This uses an eventListener for the button click, and and execCommand to copy the string, once copied the text changes to green using setAtrribute.
+#### Included functionality
+The generate button is used to trigger the series of prompts requiring the user to provide parameters for their password as follows:
 
-#### HTML & CSS
+1. Provide a value between 8 - 128 for your password string length. If the user inputs an invalid value they'll go into a loop until a valid value is input.
+
+   ![Password Generator prompt](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/promptValue.png?raw=true "Password Generator prompt")
+<br><br>
+
+![Invalid value](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/invalidLength.png?raw=true "Invalid value")
+<br><br>
+
+2. If the user wishes to exit the dialog after invoking the action they can do so using the cancel action and returned back to the main view.
+
+![Cancel action](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/cancelNull.png?raw=true "Cancel action")
+<br><br>
+
+3. Once they have provided a valid string length value, sequential confirmation dialogs include additional paramenters for generating the password. Each parameter is optional. Parameters include options for numbers, special characters, upper and lowercase letters. 
+
+![Password Generator confirm password parameters](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/IncludeParamenters.png?raw=true "confirm password parameters")
+<br><br>
+
+4. If the user does not confirm at least one parameter from the four options the user is looped and an alert is shown asking them to choose at least one parameter.
+
+![Include at least one parameter](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/invalidCriteria.png?raw=true "Include at least one parameter")
+<br><br>
+
+5. Once the user chooses a parameter the selections are stored as a variable and concatenated with the array of letters, numbers and characters determined by the user in the confirm dialogs.
+
+![Password Generator confirm password parameters](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/IncludeParamenters.png?raw=true "confirm password parameters")
+<br><br>
+
+6. A password is then randomly generated using a for loop using the values stored in the passwordCreate variable and the the math.random function. The stringLength variable provides the length of the password to be generated as specified by the user.
+
+![Password Generator confirm password parameters](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/IncludeParamenters.png?raw=true "confirm password parameters")
+<br><br>
+
+7. Once the password is successfully created and populated into the textarea HTML element using a function.
+
+![Password Generator confirm password parameters](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/IncludeParamenters.png?raw=true "confirm password parameters")
+<br><br>
+
+8. The password can be copied to clipboard using the 'copy to clipboard' action. This uses an eventListener for the button click, and and execCommand to copy the string, once copied the text changes to green using setAtrribute.
+
+![Password Generator confirm password parameters](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/IncludeParamenters.png?raw=true "confirm password parameters")
+<br><br>
+
+
+#### HTML, CSS and Javascript
 1. Index.html - Contains basic layout structure using a custom div element named 'card' to display main content. Semantic html is used for elements such as buttons and textarea
 2. styles.css - Contains layout, styling and media-queries for html content
 3. script.js - Contains Variables and variable arrays for numbers, special characters, uppercase and lowercase letters. Two event listeners, loops using while statement for invalid prompt and confirmation inputs, for loop for generating password. Function for generating and writing password to HTML. Function for copying random password to clipboard and manipulating password styles in html text area. 
