@@ -74,9 +74,6 @@ To get a local copy up and running follow these simple steps. You can also downl
 2. This project demonstrates ways in which javavscript cane be used to manipulate the DOM elements in the browser window and dynamically updating HTML.
 
 
-![Responsive layout](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/responsive.PNG?raw=true "Responsive views")
-
-
 ## Project deliverables
 
 #### Included functionality
@@ -127,6 +124,9 @@ The generate button is used to trigger the series of prompts requiring the user 
 1. Index.html - Contains basic layout structure using a custom div element named 'card' to display main content. Semantic html is used for elements such as buttons and textarea
 2. styles.css - Contains layout, styling and media-queries for html content
 3. script.js - Contains Variables and variable arrays for numbers, special characters, uppercase and lowercase letters. Two event listeners, loops using while statement for invalid prompt and confirmation inputs, for loop for generating password. Function for generating and writing password to HTML. Function for copying random password to clipboard and manipulating password styles in html text area. 
+
+#### RESPONSIVE VIEW - MOBILE
+![Responsive layout](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/responsive.PNG?raw=true "Responsive views")
 
 
 #### Pushing to GitHub
