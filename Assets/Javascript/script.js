@@ -93,7 +93,6 @@ function generatePassword() {
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
-  
     passwordText.value = password;
   
   }
@@ -106,9 +105,22 @@ function writePassword() {
 
   // Copy the password to the clipboard
   function copyPassword() {
+      document.getElementById("password").setAttribute("style", "color: green;");
       document.getElementById("password").select();
+      document.getElementById("password").focus();
       document.execCommand("Copy");
-      alert("Password copied to clipboard!");
+      alert("Your password has been copied to the clipboard");
   }
 
 console.log(copyPassword)
+
+//   var passwordText = document.querySelector("#password");
+//     passwordText.addEventListener("focusout", function() {
+//       changeColor();
+//     });
+
+//     function changeColor() {
+//       // event.preventDefault();
+//       event.stopPropagation();
+//       document.getElementById("password").setAttribute("style", "color: yellow;");
+// }

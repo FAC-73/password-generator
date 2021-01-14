@@ -186,7 +186,7 @@ button[disabled] {
   overflow: hidden;
   background-color: #141414;
   font-family: IBM Plex Mono;
-  color: #18c018
+  color: #ffffff;
 }
 
 @media (max-width: 690px) {
