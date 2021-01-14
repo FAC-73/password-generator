@@ -1,5 +1,5 @@
 # password-generator
-An application that a user can use to generate a random password based on criteria they’ve selected. Features dynamically updated HTML and CSS using Javascript. Application is fully responsive to all small and wide views.
+An application that a user can use to generate a random password based on criteria they’ve selected. Features dynamically updated HTML and CSS using Javascript. Application is fully responsive to small and wide views.
 
 ![Website screenshot](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/copy3.png?raw=true "Password Generator App")
 
@@ -74,7 +74,7 @@ To get a local copy up and running follow these simple steps. You can also downl
 2. This project demonstrates ways in which javavscript cane be used to manipulate the DOM elements in the browser window and dynamically updating HTML.
 
 
-![Responsive layout](https://github.com/FAC-73/kay-davis-portfolio/blob/main/assets/Images/readme-images/responsive-portfolio.jpg?raw=true "Responsive views")
+![Responsive layout](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/responsive.PNG?raw=true "Responsive views")
 
 
 ## Project deliverables
@@ -84,23 +84,26 @@ The generate button is used to trigger the series of prompts requiring the user 
 
 1. Provide a value between 8 - 128 for your password string length. If the user inputs an invalid value they'll go into a loop until a valid value is input.
 
-   ![Password Generator prompt](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/promptValue.png?raw=true "Password Generator prompt")
-<br><br>
+![Password Generator prompt](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/promptValue.png?raw=true "Password Generator prompt")
+<br>
+
+![Password Generator prompt invalid](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/invalidLength.png?raw=true "Password Generator prompt invalid")
+<br>
 
 2. If the user wishes to exit the dialog after invoking the action they can do so using the cancel action and returned back to the main view.
 
 ![Cancel action](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/cancelNull.png?raw=true "Cancel action")
-<br><br>
+<br>
 
 3. Once they have provided a valid string length value, sequential confirmation dialogs include additional paramenters for generating the password. Each parameter is optional. Parameters include options for numbers, special characters, upper and lowercase letters. 
 
 ![Password Generator confirm password parameters](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/IncludeParamenters.png?raw=true "confirm password parameters")
-<br><br>
+<br>
 
 4. If the user does not confirm at least one parameter from the four options the user is looped and an alert is shown asking them to choose at least one parameter.
 
 ![Include at least one parameter](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/invalidCriteria.png?raw=true "Include at least one parameter")
-<br><br>
+<br>
 
 5. Once the user chooses a parameter the selections are stored as a variable and concatenated with the array of letters, numbers and characters determined by the user in the confirm dialogs.
 
@@ -109,15 +112,15 @@ The generate button is used to trigger the series of prompts requiring the user 
 7. Once the password is successfully created and populated into the textarea HTML element using a function.
 
 ![Generate password](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/generatePassword.png?raw=true "generate password")
-<br><br>
+<br>
 
 8. The password can be copied to clipboard using the 'copy to clipboard' action. This uses an eventListener for the button click, and and execCommand to copy the string, once copied the text changes to green using setAtrribute.
 
 ![Copy password](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/copy.png?raw=true "copy password")
-<br><br>
+<br>
 
 ![Copy password confirm](https://github.com/FAC-73/password-generator/blob/main/Assets/Images/copy3.png?raw=true "copy password confirm")
-<br><br>
+<br>
 
 
 #### HTML, CSS and Javascript
